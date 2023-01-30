@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  dockercompose:
+    build:
+      context: ./LearnASP
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5113:5113"
+    volumes:
+      - ./LearnASP:/app 

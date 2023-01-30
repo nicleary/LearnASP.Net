@@ -1,0 +1,5 @@
+FROM bitnami/dotnet-sdk:7.0.102 AS build-env
+# Use native linux file polling for better performance
+ENV DOTNET_USE_POLLING_FILE_WATCHER 1
+WORKDIR /app
+ENTRYPOINT dotnet watch run --urls http://0.0.0.0:5113
