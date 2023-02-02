@@ -1,4 +1,4 @@
-FROM bitnami/dotnet-sdk:7.0.102 AS build-env
+FROM bitnami/dotnet-sdk:6 AS build-env
 # Use native linux file polling for better performance
 ENV DOTNET_USE_POLLING_FILE_WATCHER 1
 WORKDIR /app
